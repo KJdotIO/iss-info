@@ -1,5 +1,5 @@
 import './App.css';
-import { React } from 'react';
+import { React, useState, useEffect } from 'react';
 import Card from './Card';
 
 
@@ -11,40 +11,40 @@ function App() {
   console.log(formattedDate);
 
 
-  // const [issData, setissData] = useState([])
-  // const [miles, setMiles] = useState(0)
+  const [issData, setissData] = useState([])
+  const [miles, setMiles] = useState(0)
 
   
-  // const toMiles = (velocity) => {
-  //   return(
-  //     velocity * 0.621371
-  //   )
-  // }
+  const toMiles = (velocity) => {
+    return(
+      velocity * 0.621371
+    )
+  }
 
   
-  // useEffect(() => {
-  //   let intervalId;
+  useEffect(() => {
+    let intervalId;
     
-  //   const fetchData = () => {
-  //     fetch('https://api.wheretheiss.at/v1/satellites/25544')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       toMiles()
-  //       setissData(data)
+    const fetchData = () => {
+      fetch('https://api.wheretheiss.at/v1/satellites/25544')
+      .then(response => response.json())
+      .then(data => {
+        toMiles()
+        setissData(data)
 
-  //       const miles = toMiles(data.velocity)
-  //       setMiles(miles)
-  //     })
-  //   }
+        const miles = toMiles(data.velocity)
+        setMiles(miles)
+      })
+    }
 
-  //   fetchData();
+    fetchData();
 
-  //   intervalId = setInterval(fetchData, 1000);
+    intervalId = setInterval(fetchData, 1000);
 
-  //   return () => {
-  //     clearInterval(intervalId);
-  //   }
-  // }, [miles]);
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, [miles]);
 
 
   return (
