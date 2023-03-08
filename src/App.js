@@ -39,12 +39,12 @@ function App() {
 
     fetchData();
 
-    intervalId = setInterval(fetchData, 1500);
+    intervalId = setInterval(fetchData, 100000);
 
     return () => {
       clearInterval(intervalId);
     }
-  }, [miles]);
+  }, []);
 
 
   return (
