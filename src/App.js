@@ -22,29 +22,29 @@ function App() {
   }
 
   
-  useEffect(() => {
-    let intervalId;
+  // useEffect(() => {
+  //   let intervalId;
     
-    const fetchData = () => {
-      fetch('https://api.wheretheiss.at/v1/satellites/25544')
-      .then(response => response.json())
-      .then(data => {
-        toMiles()
-        setissData(data)
+  //   const fetchData = () => {
+  //     fetch('https://api.wheretheiss.at/v1/satellites/25544')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       toMiles()
+  //       setissData(data)
 
-        const miles = toMiles(data.velocity)
-        setMiles(miles)
-      })
-    }
+  //       const miles = toMiles(data.velocity)
+  //       setMiles(miles)
+  //     })
+  //   }
 
-    fetchData();
+  //   fetchData();
 
-    intervalId = setInterval(fetchData, 3000);
+  //   intervalId = setInterval(fetchData, 1000);
 
-    return () => {
-      clearInterval(intervalId);
-    }
-  }, [miles]);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   }
+  // }, [miles]);
 
 
   return (
@@ -66,7 +66,7 @@ function App() {
 
         <footer className='p-[20px] text-center'>
           <h1 className=''>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a>.</h1>
-          <h1 className=''>The FETCH method is updated every 3 seconds because otherwise it throws a fit and throws a 429 error.</h1>
+          <h1 className=''>The FETCH method is updated every 5 seconds because otherwise it throws a fit and throws a 429 error.</h1>
         </footer>
     </div>
     </>
