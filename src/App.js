@@ -1,5 +1,5 @@
 import './App.css';
-import { React, useState, useEffect } from 'react';
+import { React } from 'react';
 import Card from './Card';
 
 
@@ -11,15 +11,15 @@ function App() {
   console.log(formattedDate);
 
 
-  const [issData, setissData] = useState([])
-  const [miles, setMiles] = useState(0)
+  // const [issData, setissData] = useState([])
+  // const [miles, setMiles] = useState(0)
 
   
-  const toMiles = (velocity) => {
-    return(
-      velocity * 0.621371
-    )
-  }
+  // const toMiles = (velocity) => {
+  //   return(
+  //     velocity * 0.621371
+  //   )
+  // }
 
   
   // useEffect(() => {
