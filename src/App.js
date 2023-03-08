@@ -39,7 +39,7 @@ function App() {
 
     fetchData();
 
-    intervalId = setInterval(fetchData, 1000);
+    intervalId = setInterval(fetchData, 2000);
 
     return () => {
       clearInterval(intervalId);
@@ -62,10 +62,11 @@ function App() {
        units={'miles'}
        />
         
-        <div><FaArrowDown className=' text-5xl my-[20px]' /></div>
+        <div><FaArrowDown className=' text-5xl mt-[20px]' /></div>
 
-        <footer>
-          <h1 className='font-extrabold mb-[20px]'>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a></h1>
+        <footer className='p-[20px] text-center'>
+          <h1 className=''>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a>.</h1>
+          <h1 className=''>The FETCH method is updated every 3 seconds because otherwise it throws a fit and throws a 429 error.</h1>
         </footer>
     </div>
     </>
