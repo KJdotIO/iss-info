@@ -39,7 +39,7 @@ function App() {
 
     fetchData();
 
-    intervalId = setInterval(fetchData, 1000);
+    intervalId = setInterval(fetchData, 300000);
 
     return () => {
       clearInterval(intervalId);
