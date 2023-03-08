@@ -60,10 +60,6 @@ const Card = ({name, latitude, longitude, velocity, visibility, date, units, alt
                             <p>Current date:</p>
                             <p>{date}</p>
                         </div>
-                        {/* <div className="flex justify-between">
-                            <p>Current altitude:</p>
-                            <p>{altitude}</p>
-                        </div> */}
                         <div className="flex justify-between">
                             <p>MPH:</p>
                             <p>{velocity}</p>

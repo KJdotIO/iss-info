@@ -13,7 +13,6 @@ function App() {
 
   const [issData, setissData] = useState([])
   const [miles, setMiles] = useState(0)
-  const [altitude, setAltitude] = useState(0)
 
   
   const toMiles = (velocity) => {
