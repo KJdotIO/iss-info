@@ -35,7 +35,7 @@ function App() {
         const miles = toMiles(data.velocity)
         setMiles(miles)
   
-        timeoutId = setTimeout(fetchData, 1500);
+        timeoutId = setTimeout(fetchData, 2000);
       })
     }
   
