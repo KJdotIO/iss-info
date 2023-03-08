@@ -8,7 +8,7 @@ import { FaArrowDown } from 'react-icons/fa';
 function App() {
   var today = new Date();
   var formattedDate = today.toLocaleDateString("en-GB");
-  console.log(formattedDate);
+  
 
 
   const [issData, setissData] = useState([])
