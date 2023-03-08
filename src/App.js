@@ -65,7 +65,7 @@ function App() {
         <div><FaArrowDown className=' text-5xl my-[20px]' /></div>
 
         <footer>
-          <h1 className='font-extrabold'>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a></h1>
+          <h1 className='font-extrabold mb-[20px]'>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a></h1>
         </footer>
     </div>
     </>
