@@ -1,0 +1,15 @@
+obj = {
+    name: "iss"
+    id: 25544
+    latitude: -6.3210129669432
+    longitude: 9.7287605625779
+    altitude: 417.76941702976
+    velocity: 27585.635384856
+    visibility: "eclipsed"
+    footprint: 4496.0978015769
+    timestamp: 1678301976
+    daynum: 2460012.2913889
+    solar_lat: -4.7644945227103
+    solar_lon: 257.79156977278
+    units: "kilometers"
+}
