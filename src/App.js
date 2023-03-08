@@ -66,7 +66,7 @@ function App() {
 
         <footer className='p-[20px] text-center'>
           <h1 className=''>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a>.</h1>
-          <h1 className=''>The FETCH method is updated every 5 seconds because otherwise it throws a fit and throws a 429 error.</h1>
+          <h1 className=''>The FETCH method is ran every 1 second.</h1>
         </footer>
     </div>
     </>
