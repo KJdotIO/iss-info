@@ -39,7 +39,7 @@ function App() {
 
     fetchData();
 
-    intervalId = setInterval(fetchData, 300000);
+    intervalId = setInterval(fetchData, 1500);
 
     return () => {
       clearInterval(intervalId);
@@ -66,7 +66,7 @@ function App() {
 
         <footer className='p-[20px] text-center'>
           <h1 className=''>This was built using <a href='https://wheretheiss.at/w/developer' className=' text-blue-400'>This API</a>.</h1>
-          <h1 className=''>The FETCH method is ran every 1 second.</h1>
+          <h1 className=''>The FETCH method is ran every 1.5 seconds in order to avoid 429 errors.</h1>
         </footer>
     </div>
     </>
