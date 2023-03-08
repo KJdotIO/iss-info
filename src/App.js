@@ -23,26 +23,26 @@ function App() {
 
   
   useEffect(() => {
-    let intervalId;
-    
+    let timeoutId;
+  
     const fetchData = () => {
       fetch('https://api.wheretheiss.at/v1/satellites/25544')
       .then(response => response.json())
       .then(data => {
         toMiles()
         setissData(data)
-
+  
         const miles = toMiles(data.velocity)
         setMiles(miles)
+  
+        timeoutId = setTimeout(fetchData, 1500);
       })
     }
-
+  
     fetchData();
-
-    intervalId = setInterval(fetchData, 100000);
-
+  
     return () => {
-      clearInterval(intervalId);
+      clearTimeout(timeoutId);
     }
   }, []);
 
